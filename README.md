@@ -40,6 +40,43 @@ of the budget. Edits go through the `context_edit` tool (`mcp__clm__context_edit
 `list` shows each block's id, role, size and a preview, and one `apply` call replaces,
 deletes and adds blocks. Ordinary file tools work on the mirror too.
 
+## CLM vs `/compact`
+
+The main differences are who compacts, when, and how much of the original survives.
+
+| | Claude Code `/compact` | CLM |
+|---|---|---|
+| who compacts | a separate summarization request reads the whole conversation | the working Claude edits its own conversation |
+| when | at the auto-compact threshold (about 97% of the window), or when you type `/compact` | whenever Claude decides to, prompted by budget notes or `/clm-compact` |
+| how | everything becomes one summary | anything from a targeted edit (drop one tool output, shorten one reply, add a notes block) to a full rewrite |
+| original messages | all replaced by the summary | messages Claude does not touch stay verbatim |
+| what to keep | a fixed summarization prompt decides | Claude decides, knowing what it still has to do |
+
+### What happens as the context fills
+
+| context | `/compact` alone | with CLM |
+|---|---|---|
+| 50%, 75%, 90% of the budget | nothing | a `[CLM BUDGET]` note is added to Claude's context, once per level; Claude may compact or carry on |
+| auto-compact threshold (about 97%) | summarize everything | 1. install Claude's pending edit, if there is one; 2. otherwise withhold the oldest large tool outputs to files, if that brings the conversation under half the budget; 3. otherwise summarize, as `/compact` does |
+
+The notes only ask: Claude compacts at 50/75/90% only if it chooses to. At the threshold,
+CLM follows the fixed steps above, and Claude is not asked again.
+
+### What the benchmark showed
+
+In [REPORT.md](REPORT.md), Claude was asked to compact with `/clm-compact` in every CLM run.
+
+- In 5 of 9 runs Claude deleted nearly every block and wrote one notes block, which is a
+  summary in its own words, much like `/compact`.
+- In the 3 `vendors` runs it kept all 21 original messages and deleted only the 6 large
+  document outputs. That is the targeted kind of edit CLM allows, but it left 11.5k tokens
+  against 4.6k for `/compact`.
+- Recall was nearly the same: 100% for CLM, 99.4% for `/compact` on key facts. `/compact`
+  was leaner and cost about half as much.
+
+Not measured: whether Claude compacts on its own after a budget note, and the
+withhold-to-files step. No session in the benchmark came near the threshold.
+
 ## How it works
 
 ```text
