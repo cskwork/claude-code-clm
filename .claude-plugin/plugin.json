@@ -1,6 +1,6 @@
 {
   "name": "clm",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Context Language Model mode: Claude edits a mirror file of its own conversation, and the edit becomes its context",
   "author": { "name": "cskwork" },
   "homepage": "https://github.com/cskwork/claude-code-clm",
