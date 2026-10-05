@@ -1,0 +1,572 @@
+{
+  "scenario": "incident",
+  "runs": [
+    {
+      "arm": "none",
+      "repeat": 0,
+      "steps": [],
+      "quiz": {
+        "session": "2124f763-78fb-47c4-a307-9a339b72464e",
+        "context_tokens": 32347,
+        "cost_usd": 0.38512560000000007,
+        "wall_s": 4.0,
+        "turns": 1,
+        "result": "1. INC-4471\n2. Daniel Cho\n3. Priya Raman\n4. Monday 2026-10-12 12:00 KST\n5. 2026-10-09 (Friday, 17:00 KST)\n6. 2026-10-04T02:37:02Z (by timestamp; line 421 at 03:17:42Z is first in file position)\n7. rq-85805\n8. pg-west-2\n9. 2500 ms\n10. 7\n11. v3.16.7 (cart, 2026-09-28 22:03 UTC)\n12. tnguyen\n13. v3.18.1\n14. The hotfix needs a schema change\n15. 04:00-04:30 KST\n16. fast-checkout, until QA signs off\n17. 37\n18. 4\n19. 914-220-7781\n20. Step 14"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "score": 17,
+      "conversation_tokens": 28698,
+      "hard": {
+        "result": "1. https://pg.internal/v2\n2. half-open\n3. +1 650 555 0100\n4. v3.18.3 (search), by jlee\n5. 2026-10-04T02:41:00Z\n6. unknown (I only confirmed the count of 4, not the message text; the ERROR lines I saw were payment-gw timeouts)\n7. Line 421\n8. rq-88213",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "native",
+      "repeat": 0,
+      "steps": [
+        {
+          "session": "49b176bc-fbed-4a0c-b105-f4b8e75b7ab8",
+          "context_tokens": 0,
+          "cost_usd": 0.29118240000000006,
+          "wall_s": 16.0,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "49b176bc-fbed-4a0c-b105-f4b8e75b7ab8",
+        "context_tokens": 11409,
+        "cost_usd": 0.3328150000000001,
+        "wall_s": 4.9,
+        "turns": 1,
+        "result": "1. INC-4471\n2. Daniel Cho\n3. Priya Raman\n4. Monday 2026-10-12 12:00 KST\n5. Friday 2026-10-09 (17:00 KST)\n6. 2026-10-04T02:37:02Z (11:37:02 KST)\n7. rq-85805\n8. pg-west-2\n9. 2500 ms\n10. 7\n11. cart v3.16.7 (deployed 2026-09-28T22:03Z)\n12. tnguyen\n13. v3.18.1\n14. The hotfix needs a schema change\n15. 04:00-04:30 KST\n16. fast-checkout, until QA signs off\n17. 37\n18. 4\n19. 914-220-7781\n20. Step 14"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "score": 16,
+      "conversation_tokens": 7760,
+      "hard": {
+        "result": "1. https://pg.internal/v2\n2. half-open\n3. +1 650 555 0100\n4. unknown. search v3.18.3 by jlee at 2026-10-04T05:30:00Z is the latest I remember, but I don't know that nothing came between it and v3.18.2.\n5. 2026-10-04T02:41:00Z (by akim)\n6. unknown. I only recorded that 4 ERROR lines are on pg-east-1, not their error type.\n7. Line 421\n8. rq-88213",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "native",
+      "repeat": 1,
+      "steps": [
+        {
+          "session": "1f788d4d-9084-42b1-899a-90f115086491",
+          "context_tokens": 0,
+          "cost_usd": 0.29873740000000004,
+          "wall_s": 20.7,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "1f788d4d-9084-42b1-899a-90f115086491",
+        "context_tokens": 11515,
+        "cost_usd": 0.34150400000000003,
+        "wall_s": 5.6,
+        "turns": 1,
+        "result": "1. INC-4471\n2. Daniel Cho\n3. Priya Raman\n4. Monday 2026-10-12 12:00 KST\n5. Friday 2026-10-09 (17:00 KST)\n6. 2026-10-04T02:37:02Z\n7. rq-85805\n8. pg-west-2\n9. 2500 ms\n10. 7\n11. v3.16.7 (cart service, 2026-09-28T22:03Z)\n12. tnguyen\n13. v3.18.1\n14. The hotfix needs a schema change\n15. 04:00-04:30 KST\n16. fast-checkout, until QA signs off\n17. 37\n18. 4\n19. 914-220-7781\n20. Step 14"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "score": 16,
+      "conversation_tokens": 7866,
+      "hard": {
+        "result": "1. https://pg.internal/v2\n2. half-open\n3. +1 650 555 0100\n4. v3.18.3 (search service), by jlee\n5. 2026-10-04T02:41:00Z\n6. unknown\n7. Line 421\n8. rq-88213",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "native",
+      "repeat": 2,
+      "steps": [
+        {
+          "session": "6a6ff83b-dca3-4d8e-b938-7878bce1173f",
+          "context_tokens": 0,
+          "cost_usd": 0.29713740000000005,
+          "wall_s": 19.2,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "6a6ff83b-dca3-4d8e-b938-7878bce1173f",
+        "context_tokens": 11312,
+        "cost_usd": 0.34047200000000005,
+        "wall_s": 5.9,
+        "turns": 1,
+        "result": "1. INC-4471\n2. Daniel Cho\n3. Priya Raman\n4. Monday 2026-10-12 at 12:00 KST\n5. Friday 2026-10-09 (17:00 KST)\n6. 2026-10-04T02:37:02Z\n7. rq-85805\n8. pg-west-2\n9. 2500 ms\n10. 7\n11. cart v3.16.7, deployed 2026-09-28T22:03Z (no checkout deploy came before the first error)\n12. tnguyen\n13. v3.18.1\n14. The hotfix needs a schema change\n15. 04:00-04:30 KST\n16. fast-checkout, until QA signs off\n17. 37\n18. 4\n19. 914-220-7781\n20. Step 14"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "score": 16,
+      "conversation_tokens": 7663,
+      "hard": {
+        "result": "1. https://pg.internal/v2\n2. half-open\n3. +1 650 555 0100\n4. search v3.18.3, by jlee (2026-10-04T05:30Z), the only later deploy I noted\n5. 2026-10-04T02:41:00Z\n6. unknown\n7. Line 421\n8. rq-88213",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "clm",
+      "repeat": 0,
+      "steps": [
+        {
+          "session": "047ce815-8dc7-4576-99f6-8cf5f529ef03",
+          "context_tokens": 181499,
+          "cost_usd": 0.32574820000000004,
+          "wall_s": 14.1,
+          "turns": 4,
+          "result": "Kept the incident facts, decisions, updated deadline and on-call, and exact values; context is now about 0.6k tokens."
+        },
+        {
+          "session": "047ce815-8dc7-4576-99f6-8cf5f529ef03",
+          "context_tokens": 0,
+          "cost_usd": 0.32574820000000004,
+          "wall_s": 1.6,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "047ce815-8dc7-4576-99f6-8cf5f529ef03",
+        "context_tokens": 9837,
+        "cost_usd": 0.35884360000000004,
+        "wall_s": 4.1,
+        "turns": 1,
+        "result": "1. INC-4471\n2. Daniel Cho\n3. Priya Raman\n4. Monday 2026-10-12 12:00 KST\n5. Friday 2026-10-09 (17:00 KST)\n6. 2026-10-04T02:37:02Z (11:37 KST), app.log line 447; by file position the first is line 421 at 03:17:42Z\n7. rq-85805\n8. pg-west-2\n9. 2500 ms\n10. 7\n11. cart v3.16.7 (the last deploy before the first error)\n12. tnguyen\n13. checkout v3.18.1\n14. A hotfix would need a schema change\n15. 04:00-04:30 KST\n16. fast-checkout, until QA signs off\n17. 37\n18. 4\n19. 914-220-7781\n20. Step 14"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "score": 20,
+      "conversation_tokens": 4835,
+      "clm_state": {
+        "enabled": true,
+        "revision": 1,
+        "nonce": "5f828f26fd974464",
+        "isPending": false,
+        "lastTier": 0,
+        "history": [
+          {
+            "revision": 1,
+            "at": "2026-10-05T22:31:03.721Z",
+            "kind": "edit",
+            "kept": 1,
+            "edited": 0,
+            "added": 1,
+            "removed": 48,
+            "tokensBefore": 17288,
+            "tokensAfter": 553
+          }
+        ],
+        "lastOutcome": "revision 1 accepted: 1 kept, 0 edited, 1 added, 48 removed; ~17.3k → ~553 tokens"
+      },
+      "clm_applied": true,
+      "hard": {
+        "result": "1. https://pg.internal/v2\n2. half-open\n3. +1 650 555 0100\n4. search v3.18.3, by jlee (05:30Z)\n5. 2026-10-04T02:41:00Z (by akim)\n6. unknown\n7. Line 421\n8. rq-88213",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "clm",
+      "repeat": 1,
+      "steps": [
+        {
+          "session": "bc3fc5bf-07f3-4ea5-bc92-54a2a715e637",
+          "context_tokens": 181746,
+          "cost_usd": 0.32928860000000004,
+          "wall_s": 22.8,
+          "turns": 4,
+          "result": "Kept the incident facts, the user's decisions and deadlines, and the open caveats in one notes block, and dropped the tool output; the context is now about 0.7k tokens."
+        },
+        {
+          "session": "bc3fc5bf-07f3-4ea5-bc92-54a2a715e637",
+          "context_tokens": 0,
+          "cost_usd": 0.32928860000000004,
+          "wall_s": 1.5,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "bc3fc5bf-07f3-4ea5-bc92-54a2a715e637",
+        "context_tokens": 10352,
+        "cost_usd": 0.36406400000000005,
+        "wall_s": 7.4,
+        "turns": 1,
+        "result": "1. INC-4471\n2. Daniel Cho\n3. Priya Raman\n4. Monday 2026-10-12 12:00 KST\n5. Friday 2026-10-09 (17:00 KST)\n6. 2026-10-04T02:37:02Z (11:37 KST)\n7. rq-85805\n8. pg-west-2\n9. 2500 ms\n10. 7\n11. cart v3.16.7\n12. tnguyen\n13. checkout v3.18.1\n14. The hotfix needs a schema change\n15. 04:00-04:30 KST\n16. fast-checkout, until QA signs off\n17. 37\n18. 4\n19. 914-220-7781\n20. Step 14"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "score": 20,
+      "conversation_tokens": 5350,
+      "clm_state": {
+        "enabled": true,
+        "revision": 1,
+        "nonce": "7971f9e4f18dacb0",
+        "isPending": false,
+        "lastTier": 0,
+        "history": [
+          {
+            "revision": 1,
+            "at": "2026-10-05T22:31:32.120Z",
+            "kind": "edit",
+            "kept": 1,
+            "edited": 0,
+            "added": 1,
+            "removed": 48,
+            "tokensBefore": 17431,
+            "tokensAfter": 695
+          }
+        ],
+        "lastOutcome": "revision 1 accepted: 1 kept, 0 edited, 1 added, 48 removed; ~17.4k → ~695 tokens"
+      },
+      "clm_applied": true,
+      "hard": {
+        "result": "1. https://pg.internal/v2\n2. half-open\n3. +1 650 555 0100\n4. search v3.18.3, by jlee (05:30Z)\n5. 2026-10-04T02:41:00Z\n6. unknown\n7. Line 421\n8. rq-88213",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "clm",
+      "repeat": 2,
+      "steps": [
+        {
+          "session": "da1e250f-635b-43b2-910c-74ccad440cf9",
+          "context_tokens": 181495,
+          "cost_usd": 0.3254148,
+          "wall_s": 14.2,
+          "turns": 4,
+          "result": "Kept the incident facts, decisions, exact values and the delivered status draft in one notes block, and context is now about 0.6k tokens."
+        },
+        {
+          "session": "da1e250f-635b-43b2-910c-74ccad440cf9",
+          "context_tokens": 0,
+          "cost_usd": 0.3254148,
+          "wall_s": 1.6,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "da1e250f-635b-43b2-910c-74ccad440cf9",
+        "context_tokens": 9788,
+        "cost_usd": 0.3581942,
+        "wall_s": 3.9,
+        "turns": 1,
+        "result": "1. INC-4471\n2. Daniel Cho\n3. Priya Raman\n4. Monday 2026-10-12 12:00 KST\n5. 2026-10-09 (Friday, 17:00 KST)\n6. 2026-10-04T02:37:02Z (11:37 KST)\n7. rq-85805\n8. pg-west-2\n9. 2500 ms\n10. 7\n11. cart v3.16.7 (checkout v3.18.1 came 4 minutes after the first error)\n12. tnguyen\n13. checkout v3.18.1\n14. A hotfix would need a schema change\n15. 04:00-04:30 KST\n16. fast-checkout, until QA signs off\n17. 37\n18. 4\n19. 914-220-7781\n20. Step 14"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "score": 20,
+      "conversation_tokens": 4786,
+      "clm_state": {
+        "enabled": true,
+        "revision": 1,
+        "nonce": "5984f631599e8b89",
+        "isPending": false,
+        "lastTier": 0,
+        "history": [
+          {
+            "revision": 1,
+            "at": "2026-10-05T22:31:55.382Z",
+            "kind": "edit",
+            "kept": 1,
+            "edited": 0,
+            "added": 1,
+            "removed": 48,
+            "tokensBefore": 17270,
+            "tokensAfter": 535
+          }
+        ],
+        "lastOutcome": "revision 1 accepted: 1 kept, 0 edited, 1 added, 48 removed; ~17.3k → ~535 tokens"
+      },
+      "clm_applied": true,
+      "hard": {
+        "result": "1. https://pg.internal/v2\n2. half-open\n3. +1 650 555 0100\n4. search v3.18.3, by jlee (05:30Z)\n5. 2026-10-04T02:41:00Z (by akim)\n6. unknown\n7. Line 421\n8. rq-88213",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true
+        ]
+      }
+    }
+  ],
+  "base": {
+    "session": "ad490582-87ac-45ec-973b-0a86f11f57f3",
+    "turns": [
+      {
+        "session": "ad490582-87ac-45ec-973b-0a86f11f57f3",
+        "context_tokens": 90123,
+        "cost_usd": 0.06139560000000001,
+        "wall_s": 16.5,
+        "turns": 6,
+        "result": "The first ERROR by time is at **2026-10-04 02:37:02 UTC**. Its request id is **rq-85805** and its upstream is **pg-west-2**. The message is a `payment-gw` timeout, on line 447 of the file.\n\nThe first ERROR line in the file is a different one. Line 421 reads `2026-10-04T03:17:42Z ERROR payment-gw timeout req=rq-88213 upstream=pg-west-2`. Its timestamp is out of sequence, because the lines around it are from about 02:35. The log isn't strictly in time order, so I went by timestamp and not by position.\n\nThe ERROR lines I looked at all show `payment-gw` timeouts on `pg-west-2`. I read the log with searches and sorting. I did not read all 1,400 lines one by one.\n\nLine 421 may be a late-written entry or a clock problem on the host that wrote it. That's worth checking before the RCA is due to the customer on Friday 2026-10-09 at 17:00 KST. The timestamps are UTC, so 02:37:02 UTC is 11:37:02 KST on the same day."
+      },
+      {
+        "session": "ad490582-87ac-45ec-973b-0a86f11f57f3",
+        "context_tokens": 42606,
+        "cost_usd": 0.0880176,
+        "wall_s": 6.0,
+        "turns": 2,
+        "result": "The payment gateway timeout is **2500 ms (2.5 seconds)** and the retry count is **7**. Both are in the `payment_gateway` section of `config.yaml`. The circuit breaker is set to `half-open`.\n\nSeven retries at 2.5 seconds each could keep a single checkout request waiting about 20 seconds in total. That would fit the `payment-gw` timeouts in the log, but I haven't confirmed it."
+      },
+      {
+        "session": "ad490582-87ac-45ec-973b-0a86f11f57f3",
+        "context_tokens": 97375,
+        "cost_usd": 0.130307,
+        "wall_s": 16.8,
+        "turns": 4,
+        "result": "The last deploy before the first error is **cart v3.16.7 by tnguyen, at 2026-09-28 22:03 UTC** (2026-09-29 07:03 KST). That is about six days before the error, so it is probably unrelated.\n\nThe first error was at 2026-10-04 02:37:02 UTC. **The checkout deploys came after it, not before.**\n\n- **v3.18.1 by akim:** 02:41:00 UTC, about four minutes after the first error.\n- **v3.18.2 by mkoh:** 03:05:00 UTC.\n\nThe errors were already happening before either checkout release went out, so neither can be the trigger. They may still have affected how the outage played out afterward. The RCA shouldn't say a deploy caused it unless something else shows that.\n\nOne thing to check: line 421 of the log (03:17:42 UTC) is out of sequence. If that were the true first error, v3.18.2 would be the deploy just before it. The earlier ERROR lines at 02:37 to 02:41 make that unlikely.\n\nI used the log timestamps. I did not check whether the log and the deploy history use the same clock."
+      },
+      {
+        "session": "ad490582-87ac-45ec-973b-0a86f11f57f3",
+        "context_tokens": 27025,
+        "cost_usd": 0.1407542,
+        "wall_s": 5.5,
+        "turns": 1,
+        "result": "Noted. Checkout rolls back to v3.18.1 instead of getting a hotfix, because the hotfix needs a schema change. The rollback window is 04:00–04:30 KST, and the `fast-checkout` flag stays OFF until QA signs off.\n\nv3.18.1 went out at 02:41 UTC on 2026-10-04, and the first payment timeout came about four minutes before it. Rolling back to it may not clear the `payment-gw` timeouts if they started earlier. I'd confirm after the rollback that the errors actually stop.\n\nI haven't made any changes or saved anything to memory."
+      },
+      {
+        "session": "ad490582-87ac-45ec-973b-0a86f11f57f3",
+        "context_tokens": 54781,
+        "cost_usd": 0.1573718,
+        "wall_s": 7.2,
+        "turns": 2,
+        "result": "In `app.log`, **37** ERROR lines have `upstream=pg-west-2` and **4** have `upstream=pg-east-1`. That makes 41 ERROR lines in total, so no other upstream appears.\n\n**I need to correct my first answer.** I said the ERROR lines I looked at all showed timeouts on `pg-west-2`. I had only seen the first few, and four of the 41 are on `pg-east-1`. The errors are concentrated on `pg-west-2` but not exclusive to it. The RCA should say that."
+      },
+      {
+        "session": "ad490582-87ac-45ec-973b-0a86f11f57f3",
+        "context_tokens": 27811,
+        "cost_usd": 0.1648602,
+        "wall_s": 3.4,
+        "turns": 1,
+        "result": "Noted. The RCA is now due Monday 2026-10-12 at 12:00 KST, and Daniel Cho has taken over on-call from Priya Raman. I haven't saved anything to memory."
+      },
+      {
+        "session": "ad490582-87ac-45ec-973b-0a86f11f57f3",
+        "context_tokens": 97979,
+        "cost_usd": 0.24181180000000002,
+        "wall_s": 10.8,
+        "turns": 3,
+        "result": "The escalation phone bridge code is **914-220-7781**. The dial-in number is +1 650 555 0100.\n\nThe edge cache is flushed in **Step 14**, titled \"Flush the edge cache\".\n\nThe bridge code is in the middle of Step 15, which is a generic \"Procedure 15\", so it is easy to miss. I read the whole file. Apart from those two items, the rest is filler text with no instructions, so I found nothing that conflicts with them."
+      },
+      {
+        "session": "ad490582-87ac-45ec-973b-0a86f11f57f3",
+        "context_tokens": 42079,
+        "cost_usd": 0.25512460000000003,
+        "wall_s": 6.3,
+        "turns": 1,
+        "result": "Here is a three-line draft:\n\n```\nINC-4471 (checkout): first error 2026-10-04 02:37 UTC (11:37 KST), payment-gw timeouts, 37 of 41 errors on pg-west-2 and 4 on pg-east-1. Cause not yet confirmed.\nDecision: roll back checkout to v3.18.1 (no hotfix, it needs a schema change), window 04:00-04:30 KST. fast-checkout flag stays OFF until QA signs off.\nOn-call: Daniel Cho (took over from Priya Raman). RCA due Mon 2026-10-12 12:00 KST.\n```\n\nThe first error came about four minutes before v3.18.1 was deployed. I left out any claim that the rollback will fix the timeouts, since it may not. Tell me if you'd like that caveat added."
+      }
+    ]
+  },
+  "overhead": {
+    "native": 3649,
+    "clm": 5002
+  }
+}

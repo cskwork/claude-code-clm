@@ -1,0 +1,13 @@
+claude-code-clm ports pi-clm (https://github.com/lolipopshock/pi-clm, MIT License,
+Copyright 2026 Emanuel Casco) to Claude Code:
+
+* hooks/document.ts follows pi-clm's src/context-document.ts (mirror format, parsing,
+  identity-preserving apply, tool-pair repair) and src/overflow.ts (overflow guard).
+* hooks/text.ts adapts pi-clm's src/presentation.ts (protocol text) and src/compact.ts
+  (compact prompt).
+* steering/house-brief.md is pi-clm's steering/house-brief.md with one added line about
+  the context_edit tool.
+
+The method is from "Context Language Models" (Shao et al., arXiv:2609.37725). No code
+from the research repository https://github.com/facebookresearch/context-language-models
+(CC BY-NC 4.0) is included here.

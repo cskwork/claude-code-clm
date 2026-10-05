@@ -1,0 +1,572 @@
+{
+  "scenario": "migration",
+  "runs": [
+    {
+      "arm": "none",
+      "repeat": 0,
+      "steps": [],
+      "quiz": {
+        "session": "fd56ac39-91ba-4c7b-9709-ba578a5191e2",
+        "context_tokens": 58765,
+        "cost_usd": 0.6634742,
+        "wall_s": 3.9,
+        "turns": 1,
+        "result": "1. MIG-PG17\n2. Mina Seo\n3. 30 minutes\n4. 15 minutes\n5. 2026-11-21\n6. 2026-11-07\n7. billing.invoice_lines\n8. 48,213,907\n9. 18,240 MB\n10. As whole numbers in minor units (cents) in amount_minor, a BIGINT NOT NULL\n11. unknown\n12. tax_code\n13. It is dropped, not migrated; ticket FIN-2290\n14. 72 hours\n15. 14:02\n16. Logical replication with pglogical (not pg_upgrade --link)\n17. unknown\n18. db-billing-17a in ap-northeast-2\n19. 2,210,554\n20. platform"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "score": 18,
+      "conversation_tokens": 55116,
+      "hard": {
+        "result": "1. VARCHAR(8)\n2. amount_minor\n3. 1,312 MB\n4. 501\n5. Finance\n6. 15:37\n7. finance\n8. No (NOT NULL)",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "native",
+      "repeat": 0,
+      "steps": [
+        {
+          "session": "cf498b05-935c-4871-a98a-85896798f9c8",
+          "context_tokens": 0,
+          "cost_usd": 0.4814015,
+          "wall_s": 23.3,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "cf498b05-935c-4871-a98a-85896798f9c8",
+        "context_tokens": 8365,
+        "cost_usd": 0.5090281,
+        "wall_s": 3.8,
+        "turns": 1,
+        "result": "1. MIG-PG17\n2. Mina Seo\n3. 30 minutes\n4. 15 minutes\n5. 2026-11-21\n6. 2026-11-07\n7. billing.invoice_lines\n8. 48,213,907\n9. 18,240 MB\n10. As BIGINT minor units in the amount_minor column (currency CHAR(3), default KRW)\n11. unknown\n12. tax_code\n13. It is dropped, not migrated; ticket FIN-2290\n14. 72 hours\n15. 14:02\n16. Logical replication with pglogical (not pg_upgrade --link)\n17. unknown\n18. db-billing-17a, ap-northeast-2\n19. 2,210,554\n20. platform"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "score": 18,
+      "conversation_tokens": 4716,
+      "hard": {
+        "result": "1. VARCHAR(8), nullable\n2. amount_minor\n3. 1,312 MB\n4. 501 (the file has 502 lines including the header)\n5. Finance\n6. 15:37\n7. finance\n8. No, it is NOT NULL",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "native",
+      "repeat": 1,
+      "steps": [
+        {
+          "session": "2383d990-3218-4f6b-a8fc-929bd487e171",
+          "context_tokens": 0,
+          "cost_usd": 0.4813106,
+          "wall_s": 23.1,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "2383d990-3218-4f6b-a8fc-929bd487e171",
+        "context_tokens": 8461,
+        "cost_usd": 0.5092211999999999,
+        "wall_s": 3.5,
+        "turns": 1,
+        "result": "1. MIG-PG17\n2. Mina Seo\n3. 30 minutes\n4. 15 minutes\n5. 2026-11-21\n6. 2026-11-07\n7. billing.invoice_lines\n8. 48,213,907\n9. 18,240 MB\n10. As minor units in a BIGINT column (amount_minor)\n11. unknown\n12. tax_code\n13. It is dropped, not migrated; confirmed by ticket FIN-2290\n14. 72 hours\n15. 14:02\n16. pglogical logical replication (not pg_upgrade --link)\n17. unknown\n18. db-billing-17a in ap-northeast-2\n19. 2,210,554\n20. platform"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "score": 18,
+      "conversation_tokens": 4812,
+      "hard": {
+        "result": "1. VARCHAR(8)\n2. amount_minor\n3. 1,312 MB\n4. 501\n5. Finance\n6. 15:37\n7. finance\n8. No (NOT NULL)",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "native",
+      "repeat": 2,
+      "steps": [
+        {
+          "session": "63ba6969-5feb-4cf5-99a1-f4687ebe7aa4",
+          "context_tokens": 0,
+          "cost_usd": 0.4718206,
+          "wall_s": 19.2,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "63ba6969-5feb-4cf5-99a1-f4687ebe7aa4",
+        "context_tokens": 7643,
+        "cost_usd": 0.4995592,
+        "wall_s": 13.4,
+        "turns": 1,
+        "result": "1. MIG-PG17\n2. Mina Seo\n3. 30 minutes\n4. 15 minutes\n5. 2026-11-21\n6. 2026-11-07\n7. billing.invoice_lines\n8. 48,213,907\n9. 18,240 MB\n10. As integer minor units in `amount_minor` (BIGINT)\n11. unknown\n12. tax_code\n13. It is dropped, not migrated; ticket FIN-2290\n14. 72 hours\n15. unknown\n16. Logical replication with pglogical (not pg_upgrade --link)\n17. unknown\n18. db-billing-17a in ap-northeast-2\n19. 2,210,554\n20. platform"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "score": 17,
+      "conversation_tokens": 3994,
+      "hard": {
+        "result": "1. VARCHAR(8), nullable\n2. amount_minor\n3. 1,312 MB\n4. unknown\n5. unknown\n6. unknown\n7. finance\n8. No, it is NOT NULL",
+        "marks": [
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "clm",
+      "repeat": 0,
+      "steps": [
+        {
+          "session": "24d3388a-ce49-44d1-8dee-3fda5f851f9f",
+          "context_tokens": 362306,
+          "cost_usd": 0.5598689999999998,
+          "wall_s": 22.8,
+          "turns": 5,
+          "result": "Kept your requests, my answers, the decisions, the open items and the exact values. I dropped the file dumps and failed shell calls. Context is now about 2.5k tokens, down from about 24k."
+        },
+        {
+          "session": "24d3388a-ce49-44d1-8dee-3fda5f851f9f",
+          "context_tokens": 0,
+          "cost_usd": 0.5598689999999998,
+          "wall_s": 1.5,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "24d3388a-ce49-44d1-8dee-3fda5f851f9f",
+        "context_tokens": 16197,
+        "cost_usd": 0.6181643999999998,
+        "wall_s": 3.8,
+        "turns": 1,
+        "result": "1. MIG-PG17\n2. Mina Seo\n3. 30 minutes\n4. 15 minutes\n5. 2026-11-21\n6. 2026-11-07\n7. billing.invoice_lines\n8. 48,213,907\n9. 18,240 MB\n10. As whole numbers in minor units, in amount_minor (BIGINT NOT NULL)\n11. unknown\n12. tax_code\n13. It is dropped, not migrated; finance confirmed it in ticket FIN-2290\n14. 72 hours\n15. 14:02\n16. pglogical logical replication (not pg_upgrade --link)\n17. unknown\n18. db-billing-17a in ap-northeast-2\n19. 2,210,554\n20. platform"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        null,
+        true,
+        true,
+        true,
+        true,
+        true,
+        null,
+        true,
+        true,
+        true
+      ],
+      "score": 18,
+      "conversation_tokens": 11195,
+      "clm_state": {
+        "enabled": true,
+        "revision": 1,
+        "nonce": "e3b5f092ef9e4638",
+        "isPending": false,
+        "lastTier": 0,
+        "history": [
+          {
+            "revision": 1,
+            "at": "2026-10-05T22:31:12.408Z",
+            "kind": "edit",
+            "kept": 18,
+            "edited": 0,
+            "added": 1,
+            "removed": 28,
+            "tokensBefore": 25757,
+            "tokensAfter": 2171
+          }
+        ],
+        "lastOutcome": "revision 1 accepted: 18 kept, 0 edited, 1 added, 28 removed; ~25.8k → ~2.2k tokens"
+      },
+      "clm_applied": true,
+      "hard": {
+        "result": "1. VARCHAR(8), nullable\n2. amount_minor\n3. 1,312 MB\n4. 501\n5. Finance (ticket FIN-2290)\n6. 15:37\n7. finance\n8. No, it is NOT NULL",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "clm",
+      "repeat": 1,
+      "steps": [
+        {
+          "session": "c1f54d4e-1b06-4d29-9ca3-672ccec7daaf",
+          "context_tokens": 286247,
+          "cost_usd": 0.5220095999999999,
+          "wall_s": 14.7,
+          "turns": 4,
+          "result": "Kept the project facts, your decisions and updates, the exact figures, and the open items (including the unanswered finance count and `crm` total), and dropped the raw file dumps; context is now about 0.7k tokens, down from about 24k."
+        },
+        {
+          "session": "c1f54d4e-1b06-4d29-9ca3-672ccec7daaf",
+          "context_tokens": 0,
+          "cost_usd": 0.5220095999999999,
+          "wall_s": 1.6,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "c1f54d4e-1b06-4d29-9ca3-672ccec7daaf",
+        "context_tokens": 10331,
+        "cost_usd": 0.5569409999999999,
+        "wall_s": 3.7,
+        "turns": 1,
+        "result": "1. MIG-PG17\n2. Mina Seo\n3. 30 minutes\n4. 15 minutes\n5. 2026-11-21\n6. 2026-11-07\n7. billing.invoice_lines\n8. 48,213,907\n9. 18,240 MB\n10. As BIGINT amount_minor in minor units (\"cents\"), with a separate currency CHAR(3) column defaulting to 'KRW'\n11. unknown\n12. tax_code\n13. It is dropped, not migrated; ticket FIN-2290\n14. 72 hours\n15. 14:02\n16. Logical replication with pglogical (not pg_upgrade --link)\n17. unknown\n18. db-billing-17a, ap-northeast-2\n19. 2,210,554\n20. platform"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        null,
+        true,
+        true,
+        true,
+        true,
+        true,
+        null,
+        true,
+        true,
+        true
+      ],
+      "score": 18,
+      "conversation_tokens": 5329,
+      "clm_state": {
+        "enabled": true,
+        "revision": 1,
+        "nonce": "2cbd57963e03ad87",
+        "isPending": false,
+        "lastTier": 0,
+        "history": [
+          {
+            "revision": 1,
+            "at": "2026-10-05T22:34:01.084Z",
+            "kind": "edit",
+            "kept": 1,
+            "edited": 0,
+            "added": 1,
+            "removed": 45,
+            "tokensBefore": 25086,
+            "tokensAfter": 726
+          }
+        ],
+        "lastOutcome": "revision 1 accepted: 1 kept, 0 edited, 1 added, 45 removed; ~25.1k → ~726 tokens"
+      },
+      "clm_applied": true,
+      "hard": {
+        "result": "1. VARCHAR(8), nullable\n2. amount_minor\n3. 1,312 MB\n4. 501\n5. Finance\n6. 15:37\n7. finance\n8. No, it is NOT NULL",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "arm": "clm",
+      "repeat": 2,
+      "steps": [
+        {
+          "session": "33c94b2a-9ee0-4261-8a29-07b35a69a77c",
+          "context_tokens": 286229,
+          "cost_usd": 0.5216265999999999,
+          "wall_s": 18.2,
+          "turns": 4,
+          "result": "Kept the project facts, decisions, updated date and downtime limit, open items and exact values. Context is now about 0.8k tokens, down from about 24k."
+        },
+        {
+          "session": "33c94b2a-9ee0-4261-8a29-07b35a69a77c",
+          "context_tokens": 0,
+          "cost_usd": 0.5216265999999999,
+          "wall_s": 1.5,
+          "turns": 0,
+          "result": ""
+        }
+      ],
+      "quiz": {
+        "session": "33c94b2a-9ee0-4261-8a29-07b35a69a77c",
+        "context_tokens": 10295,
+        "cost_usd": 0.5563939999999999,
+        "wall_s": 4.4,
+        "turns": 1,
+        "result": "1. MIG-PG17\n2. Mina Seo\n3. 30 minutes\n4. 15 minutes\n5. 2026-11-21\n6. 2026-11-07\n7. billing.invoice_lines\n8. 48,213,907\n9. 18,240 MB\n10. As amount_minor, a BIGINT in minor units (\"cents\"), with currency CHAR(3) defaulting to 'KRW'\n11. unknown\n12. tax_code\n13. It is dropped, not migrated; ticket FIN-2290\n14. 72 hours\n15. 14:02\n16. Logical replication with pglogical (not pg_upgrade --link)\n17. unknown\n18. db-billing-17a, ap-northeast-2\n19. 2,210,554\n20. platform"
+      },
+      "marks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        null,
+        true,
+        true,
+        true,
+        true,
+        true,
+        null,
+        true,
+        true,
+        true
+      ],
+      "score": 18,
+      "conversation_tokens": 5293,
+      "clm_state": {
+        "enabled": true,
+        "revision": 1,
+        "nonce": "42532b1f7fce1b13",
+        "isPending": false,
+        "lastTier": 0,
+        "history": [
+          {
+            "revision": 1,
+            "at": "2026-10-05T22:34:24.517Z",
+            "kind": "edit",
+            "kept": 1,
+            "edited": 0,
+            "added": 1,
+            "removed": 45,
+            "tokensBefore": 25091,
+            "tokensAfter": 731
+          }
+        ],
+        "lastOutcome": "revision 1 accepted: 1 kept, 0 edited, 1 added, 45 removed; ~25.1k → ~731 tokens"
+      },
+      "clm_applied": true,
+      "hard": {
+        "result": "1. VARCHAR(8), nullable\n2. amount_minor\n3. 1,312 MB\n4. 501\n5. Finance\n6. 15:37\n7. finance\n8. No, it is NOT NULL",
+        "marks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    }
+  ],
+  "base": {
+    "session": "786909bc-7005-423f-827c-748cec124a95",
+    "turns": [
+      {
+        "session": "786909bc-7005-423f-827c-748cec124a95",
+        "context_tokens": 80058,
+        "cost_usd": 0.0885926,
+        "wall_s": 9.7,
+        "turns": 4,
+        "result": "The largest billing table is **`billing.invoice_lines`**, with **48,213,907 rows** and a size of **18,240 MB** (about 17.8 GB). I read all 502 rows of `table_stats.csv`.\n\nIt is also the largest table in the whole file. The next-largest billing table is only about 4,000 MB, so `invoice_lines` is roughly 4.5 times bigger. It is owned by finance.\n\nThe file doesn't say whether `size_mb` includes indexes. If it doesn't, the real footprint is larger, which matters for planning the 15-minute write-downtime window."
+      },
+      {
+        "session": "786909bc-7005-423f-827c-748cec124a95",
+        "context_tokens": 111539,
+        "cost_usd": 0.22386239999999996,
+        "wall_s": 8.9,
+        "turns": 4,
+        "result": "Money in `invoice_lines` is stored as whole numbers in minor units (`amount_minor`, a `BIGINT NOT NULL`). The file's own comment says \"cents\".\n\nThe default currency is **KRW**. The `currency` column is `CHAR(3) NOT NULL DEFAULT 'KRW'`.\n\nThe legacy column is **`tax_code`**, a nullable `VARCHAR(8)` marked \"legacy field, nullable\".\n\nI read all 1,791 lines. The other columns are `id` (the primary key) and `invoice_id`.\n\n- **No schema prefix:** the file doesn't put `invoice_lines` in a schema. The stats file lists it under `billing`, so I'm treating them as the same table.\n- **KRW has no cents:** KRW has no fractional unit, so for KRW rows \"minor units\" is just won. The \"cents\" comment fits other currencies but not the default."
+      },
+      {
+        "session": "786909bc-7005-423f-827c-748cec124a95",
+        "context_tokens": 121918,
+        "cost_usd": 0.2920564,
+        "wall_s": 6.0,
+        "turns": 2,
+        "result": "The notes contain two DECISION lines:\n\n1. **[14:02]** Cutover uses dual-write for 72 hours before switching reads.\n2. **[15:37]** The legacy `tax_code` column is dropped, not migrated. Finance confirmed it (ticket FIN-2290).\n\n- **Out of order:** both lines are filed out of time order. The 14:02 line sits between 13:27 and 13:28, and the 15:37 line sits between 18:57 and 18:58. The timestamps may be wrong, or the lines may have been inserted later, so I'd confirm both with the note-taker.\n- **Related to the schema:** the second decision matches the `tax_code` column I found in `schema_old.sql`.\n- **Possible conflict with the downtime limit:** a 72-hour dual-write period is a long window. It doesn't conflict with the 15-minute write-downtime limit by itself, but it needs a plan for keeping both copies of `invoice_lines` in sync."
+      },
+      {
+        "session": "786909bc-7005-423f-827c-748cec124a95",
+        "context_tokens": 266945,
+        "cost_usd": 0.35788999999999993,
+        "wall_s": 10.4,
+        "turns": 4,
+        "result": "I can't give you exact numbers yet. The shell is asking for approval on every command I try (a plain count and a short script), and no approval has come through.\n\nI could add up 500 rows by hand from the file I already read. I won't, because a slip would give you a plausible but wrong number, and you asked for exact ones.\n\nIf you approve a read-only command on `table_stats.csv`, I'll run it and report two figures: the number of finance-owned tables, and the total `size_mb` of the `crm` schema. The file has 502 lines: a header and 501 table rows. The `crm` total will also count `contacts_legacy`, which sits in that schema."
+      },
+      {
+        "session": "786909bc-7005-423f-827c-748cec124a95",
+        "context_tokens": 67453,
+        "cost_usd": 0.37635459999999993,
+        "wall_s": 5.0,
+        "turns": 1,
+        "result": "Recorded for MIG-PG17: logical replication with pglogical, not `pg_upgrade --link`, so we can meet the 15-minute write-downtime limit and keep a rollback path. The target is `db-billing-17a` in ap-northeast-2.\n\nOne thing to settle: the earlier meeting decision says 72 hours of dual-write before switching reads. That overlaps with what pglogical replication already does. Someone should confirm whether both are still planned or whether pglogical replaces dual-write."
+      },
+      {
+        "session": "786909bc-7005-423f-827c-748cec124a95",
+        "context_tokens": 67920,
+        "cost_usd": 0.39283679999999993,
+        "wall_s": 3.3,
+        "turns": 1,
+        "result": "Noted for MIG-PG17: the migration date moves from 2026-11-07 to **2026-11-21**, and the CFO's write-downtime limit is now **30 minutes** instead of 15.\n\nThe pglogical decision still stands. The rollback path was part of the reason for it, and the extra 15 minutes doesn't remove that need."
+      },
+      {
+        "session": "786909bc-7005-423f-827c-748cec124a95",
+        "context_tokens": 68096,
+        "cost_usd": 0.40895839999999994,
+        "wall_s": 3.7,
+        "turns": 1,
+        "result": "`crm.contacts_legacy` is line 378 of `table_stats.csv`:\n\n- **Rows:** 2,210,554\n- **Size:** 1,312 MB\n- **Owner:** platform\n\nIt's one of only two tables in the file with a real name instead of a `t_###` placeholder. The other is `billing.invoice_lines`. The schema file has no matching definition for `contacts_legacy`, so I can't tell you its columns."
+      },
+      {
+        "session": "786909bc-7005-423f-827c-748cec124a95",
+        "context_tokens": 68326,
+        "cost_usd": 0.42805119999999997,
+        "wall_s": 5.2,
+        "turns": 1,
+        "result": "**MIG-PG17 migration checklist** (owner: Mina Seo, target `db-billing-17a`, ap-northeast-2)\n\n- **Date and limit:** cutover on 2026-11-21, with write downtime of at most 30 minutes (the CFO relaxed it from 15).\n- **Method:** pglogical logical replication, not `pg_upgrade --link`. Keep the old Postgres 13 cluster intact as the rollback path. Confirm whether the 72-hour dual-write decision still applies alongside pglogical.\n- **Biggest table:** plan the initial copy and catch-up around `billing.invoice_lines` (48,213,907 rows, 18,240 MB, finance-owned). Check whether `size_mb` includes indexes.\n- **Schema change:** drop the legacy `tax_code` column rather than migrating it (FIN-2290, finance confirmed). Money stays as `amount_minor` (BIGINT) with `currency` defaulting to KRW. Verify the 2026-11-21 target schema matches.\n- **Open items before the date:** get approval to run the finance table count and the `crm` size total, which are still unanswered. Find out what `crm.contacts_legacy` (2,210,554 rows, platform-owned) should do, since it has no schema definition. Confirm the out-of-order timestamps on the two meeting decisions."
+      }
+    ]
+  },
+  "overhead": {
+    "native": 3649,
+    "clm": 5002
+  }
+}

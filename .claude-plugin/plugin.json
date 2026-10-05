@@ -1,0 +1,36 @@
+{
+  "name": "clm",
+  "version": "0.1.0",
+  "description": "Context Language Model mode: Claude edits a mirror file of its own conversation, and the edit becomes its context",
+  "author": { "name": "cskwork" },
+  "homepage": "https://github.com/cskwork/claude-code-clm",
+  "license": "MIT",
+  "userConfig": {
+    "budget": {
+      "type": "number",
+      "title": "Token budget",
+      "description": "Tokens the budget notices and the overflow guard measure against. 0 uses the model's context window.",
+      "default": 0
+    },
+    "reminders": {
+      "type": "string",
+      "title": "Budget notices",
+      "description": "Budget fractions at which a [CLM BUDGET] note is added to Claude's context.",
+      "default": "50/75/90",
+      "options": ["50/75/90", "75/90", "90", "off"]
+    },
+    "guard": {
+      "type": "boolean",
+      "title": "Overflow guard",
+      "description": "When Claude Code auto-compacts and no edit is pending, withhold the oldest tool results (saved to files) instead of summarizing, if that brings the context under budget.",
+      "default": true
+    },
+    "steering": {
+      "type": "string",
+      "title": "Steering",
+      "description": "house appends the bundled context-management brief to the system prompt; none keeps the protocol text alone.",
+      "default": "house",
+      "options": ["house", "none"]
+    }
+  }
+}
